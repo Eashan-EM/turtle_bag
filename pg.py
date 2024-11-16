@@ -30,7 +30,7 @@ class playground():
     else:
       return "OBS_FOUND"
   def escaped(self):
-    if (self.turtlePos[0]<1 or self.turtlePos[0]>=6) or (self.turtlePos[1]<1 or self.turtlePos[1]>=6):
+    if (self.turtlePos[0]<4 or self.turtlePos[0]>=11) or (self.turtlePos[1]<4 or self.turtlePos[1]>=11):
       return True
     return False
   def draw(self):
