@@ -36,13 +36,6 @@ class playground():
       self.area[temp[0]][temp[1]] = 3
     else:
       return "OBS_FOUND"
-<<<<<<< HEAD
-  def escaped(self):
-    if (self.turtlePos[0]<4 or self.turtlePos[0]>=11) or (self.turtlePos[1]<4 or self.turtlePos[1]>=11):
-      return True
-    return False
-=======
->>>>>>> 30e67230a3370e9e31544c1c8e43e1abccd4dba6
   def draw(self):
     for i in range(0, len(self.area)):
       for j in range(0, len(self.area[0])):
