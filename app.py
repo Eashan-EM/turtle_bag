@@ -1,25 +1,20 @@
 from pg import playground
 
-min = 3
-max = 13
-pg = playground([24, 24])
+x = 6
+y = 7
+dis = 8
+pg = playground([36, 36])
 """
-for i in range(min, max):
-  pg.obs((max, i))
-  pg.obs((i, min))
-  pg.obs((i, max))
-pg.obs((max, max))
+pg.obs((x, y), pg.DOWN, dis)
+pg.obs((x+dis, y), pg.RIGHT, dis)
+pg.obs((x, y+dis), pg.DOWN, dis+1)
 """
-pg.setPos((12, 12))
-#pg.setEnd((0, 3))
-for i in range(1, 12):
-  for j in range(0, i):
-    if i%4==1:
-      pg.move(pg.UP)
-    elif i%4==2:
-      pg.move(pg.RIGHT)
-    elif i%4==3:
-      pg.move(pg.DOWN)
-    elif i%4==0:
-      pg.move(pg.LEFT)
+pg.setPos((10, 12))
+pg.setEnd((0, 12))
+pg.perspective(pg.REL, pg.RIGHT)
+for i in range(0, 20):
+  msg = pg.move(i+1, pg.RIGHT)
+  if msg=="OBS_FOUND":
+    break
+
 pg.draw()
